@@ -16,29 +16,8 @@ class Main
         ArrayList<DataEntry> lastNamesDataset = Dataset.getDataset("src/facebook-lastnames-withcount.txt");
         ArrayList<DataEntry> firstNamesDataset = Dataset.getDataset("src/facebook-firstnames-withcount.txt");
 
-        ArrayList<DataEntry> test1 = Dataset.getLastXElements(lastNamesDataset, 100);
-        ArrayList<DataEntry> test2 = Dataset.getFirstXElements(firstNamesDataset, 100);
-
-        //last 100 element printer
-        for (int i = 0; i < test1.size(); i++)
-        {
-            System.out.print(i + "     ");
-            System.out.print(test1.get(i).count + "       ");
-            System.out.println(test1.get(i).name);
-        }
-
-        //first 100 element printer
-        System.out.println("------------------------------------------------");
-        for (int i = 0; i < test2.size(); i++)
-        {
-            System.out.print(i + "     ");
-            System.out.print(test2.get(i).count + "       ");
-            System.out.println(test2.get(i).name);
-        }
+        System.out.println(lastNamesDataset.get(0));
 
 
-        //prints arraylist sizes
-        System.out.println("Last name size: " + Dataset.getSizeDataset(lastNamesDataset));
-        System.out.println("Last name size: " + Dataset.getSizeDataset(firstNamesDataset));
     }
 }

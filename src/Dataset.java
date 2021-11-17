@@ -15,9 +15,9 @@ class Dataset
         //and count will be updated with the number followed by name. It is then added to ze dataset arraylist muhahahahaaaa
         while (scn.hasNext())
         {
-            DataEntry entry = new DataEntry();
-            entry.count = scn.nextInt();
-            entry.name = scn.next();
+            int count = scn.nextInt();
+            String name = scn.next();
+            DataEntry entry = new DataEntry(name, count);
             dataset.add(entry);
         }
 
