@@ -1,28 +1,20 @@
+import java.util.ArrayList;
+
 public class Sort
 {
-    //change for dataentry objects
-    public static void selectionSort(int[] a)
+    //change for dataentry objects in an arraylist
+    public static void selectionSort(ArrayList<DataEntry> a)
     {
-        for(int i = 0; i < a.length; i++)
+        for(int i = 0; i < a.size() - 1; i++)
         {
-            int k = minIndex(a,i);
-            //swap
-            int t = a[k]; a[k] = a[i]; a[i] = t;
-        }
-    }
+            int min = i;
+            for (int j = i + 1; j < a.size(); j++)
+                if (a.get(j).compareTo(a.get(min)) < 0)
+                    min = j;
 
-    public static int minIndex(int[] list, int i)
-    {
-        int answer = i;
-        int min = list[answer];
-        for(int k = answer+1; k < list.length; k++)
-        {
-            if(k < min)
-            {
-                min = list[k];
-                answer = k;
-            }
+            String temp = a.get(i).name;
+            a.get(i).name = a.get(min).name;
+            a.get(min).name = temp;
         }
-        return answer;
     }
 }
