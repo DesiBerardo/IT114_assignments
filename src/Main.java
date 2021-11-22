@@ -19,8 +19,6 @@ class Main
         //ArrayList<DataEntry> lastNamesDataset = Dataset.getDataset("src/facebook-lastnames-withcount.txt");
         //ArrayList<DataEntry> firstNamesDataset = Dataset.getDataset("src/facebook-firstnames-withcount.txt");
 
-
-
         Sort.selectionSort(lastNamesDataset);
         Sort.selectionSort(firstNamesDataset);
 

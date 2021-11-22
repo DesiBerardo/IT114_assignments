@@ -13,8 +13,11 @@ public class Sort
                     min = j;
 
             String temp = a.get(i).name;
+            int temp1 = a.get(i).count;
             a.get(i).name = a.get(min).name;
+            a.get(i).count = a.get(min).count;
             a.get(min).name = temp;
+            a.get(min).count= temp1;
         }
     }
 }
