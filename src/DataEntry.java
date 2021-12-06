@@ -27,6 +27,6 @@ class DataEntry
 
     @Override
     public String toString() {
-        return "count=" + count + ", name='" + name;
+        return "count = " + count + ", name = " + name;
     }
 }
