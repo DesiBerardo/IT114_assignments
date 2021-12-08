@@ -9,9 +9,10 @@ public class Timer
 
     public double endTimer()
     {
+        endTime = System.nanoTime();
         System.out.println(duration());
 
-        return endTime = System.nanoTime();
+        return endTime;
     }
 
     public double duration()
